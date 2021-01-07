@@ -12,10 +12,14 @@ struct CarouselView: View {
     var body: some View {
         TabView() {
             ForEach(data) { entry in
-                VStack {
-                    DataView(entry: entry)
-                        .padding(.bottom)
-                    ChartsView(entry: entry)
+                HStack {
+                    Spacer()
+                    VStack {
+                        DataView(entry: entry)
+                            .padding(.bottom)
+                        ChartsView(entry: entry)
+                    }
+                    Spacer()
                 }
             }
         }

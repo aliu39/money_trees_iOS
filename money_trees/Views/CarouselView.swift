@@ -13,9 +13,7 @@ struct CarouselView: View {
         TabView() {
             ForEach(data) { entry in
                 VStack {
-                    Text(entry.type.rawValue)
-                        .font(.title)
-                    Text(entry.startingDate)
+                    DataView(entry: entry)
                 }
             }
         }

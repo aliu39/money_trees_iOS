@@ -14,6 +14,8 @@ struct CarouselView: View {
             ForEach(data) { entry in
                 VStack {
                     DataView(entry: entry)
+                        .padding(.bottom)
+                    ChartsView(entry: entry)
                 }
             }
         }

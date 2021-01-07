@@ -17,7 +17,7 @@ struct ContentView: View {
                     Text("empty")
                 }
             }
-            .navigationTitle("Money Tree")
+            .navigationTitle("Money Trees")
         }
     }
 }

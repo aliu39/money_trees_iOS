@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		008E23038312F46E4BAE48AC /* Pods_money_treesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F98321D7534F99F97E05930 /* Pods_money_treesTests.framework */; };
 		C575D091A16B1DD084B35A76 /* Pods_money_trees_money_treesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C810D028995899F9E5291070 /* Pods_money_trees_money_treesUITests.framework */; };
+		DF9025F025A6EB3600A0403C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9025EF25A6EB3600A0403C /* Helpers.swift */; };
 		DFD15B4B25A6C52600FBAB21 /* money_treesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B4A25A6C52600FBAB21 /* money_treesApp.swift */; };
 		DFD15B4D25A6C52600FBAB21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B4C25A6C52600FBAB21 /* ContentView.swift */; };
 		DFD15B4F25A6C52700FBAB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD15B4E25A6C52700FBAB21 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		9909E2D540257CDA2EE00ACE /* Pods-money_trees-money_treesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-money_trees-money_treesUITests.debug.xcconfig"; path = "Target Support Files/Pods-money_trees-money_treesUITests/Pods-money_trees-money_treesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9CB0FB649D8EAC7CF8724CA5 /* Pods-money_trees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-money_trees.debug.xcconfig"; path = "Target Support Files/Pods-money_trees/Pods-money_trees.debug.xcconfig"; sourceTree = "<group>"; };
 		C810D028995899F9E5291070 /* Pods_money_trees_money_treesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_money_trees_money_treesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF9025EF25A6EB3600A0403C /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		DFD15B4725A6C52600FBAB21 /* money_trees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = money_trees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD15B4A25A6C52600FBAB21 /* money_treesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = money_treesApp.swift; sourceTree = "<group>"; };
 		DFD15B4C25A6C52600FBAB21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,7 +117,6 @@
 				73F759A649005C0ABE34062E /* Pods-money_treesTests.debug.xcconfig */,
 				3AF2E66E7C8301A82C24948C /* Pods-money_treesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -195,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				DFD15B8A25A6CCFE00FBAB21 /* APIResponse.swift */,
+				DF9025EF25A6EB3600A0403C /* Helpers.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -437,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD15B9D25A6DE5500FBAB21 /* DataView.swift in Sources */,
+				DF9025F025A6EB3600A0403C /* Helpers.swift in Sources */,
 				DFD15B4D25A6C52600FBAB21 /* ContentView.swift in Sources */,
 				DFD15B8B25A6CCFE00FBAB21 /* APIResponse.swift in Sources */,
 				DFD15B8225A6CCDC00FBAB21 /* CarouselView.swift in Sources */,

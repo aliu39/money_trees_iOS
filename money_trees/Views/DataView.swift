@@ -11,9 +11,9 @@ struct DataView: View {
     var entry: BudgetData
     var strData: String {
         var res = ""
-        var mo = 1
+        var mo = 0
         for num in (entry.values) {
-            res += String(mo) + ": $" + String(num) + "   "
+            res += monthToStr(mo) + ": $" + String(num) + "   "
             mo += 1
         }
         return res

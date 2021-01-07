@@ -6,11 +6,44 @@
 //
 
 import SwiftUI
+import Charts
 
 struct ChartsView: View {
     var entry: BudgetData
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            BarChart(d: entry.values)
+        }
+    }
+}
+
+struct BarChart: View {
+    var data: [Float]
+    var max: Float
+    init(d: [Float]) {
+        data = d
+        if let M = d.max() {
+            max = M
+        }
+        else {
+            max = 0
+        }
+    }
+    
+    var body: some View {
+        HStack {
+            ForEach(0..<data.count) { month in
+                VStack {
+                  Spacer()
+                  Rectangle()
+                    .fill(Color.green)
+                    .frame(width: 20, height: ((max == 0) ? 0 : 400 * CGFloat(data[month] / max)))
+                  Text(monthToStr(month))
+                    .font(.footnote)
+                    .frame(height: 20)
+                }
+            }
+        }
     }
 }
 

@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
         NavigationView {
+            
             List {
                 if true {
                     CarouselView(data: SAMPLE_DATA)

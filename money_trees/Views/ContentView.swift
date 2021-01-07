@@ -9,8 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                if true {
+                    CarouselView(data: SAMPLE_DATA)
+                } else {
+                    Text("empty")
+                }
+            }
+            .navigationTitle("Money Tree")
+        }
     }
 }
 

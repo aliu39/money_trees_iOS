@@ -13,6 +13,8 @@
 		DFD15B5225A6C52700FBAB21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD15B5125A6C52700FBAB21 /* Preview Assets.xcassets */; };
 		DFD15B5D25A6C52700FBAB21 /* money_treesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B5C25A6C52700FBAB21 /* money_treesTests.swift */; };
 		DFD15B6825A6C52700FBAB21 /* money_treesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B6725A6C52700FBAB21 /* money_treesUITests.swift */; };
+		DFD15B8225A6CCDC00FBAB21 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B8125A6CCDC00FBAB21 /* CarouselView.swift */; };
+		DFD15B8B25A6CCFE00FBAB21 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B8A25A6CCFE00FBAB21 /* APIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		DFD15B6325A6C52700FBAB21 /* money_treesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = money_treesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD15B6725A6C52700FBAB21 /* money_treesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = money_treesUITests.swift; sourceTree = "<group>"; };
 		DFD15B6925A6C52700FBAB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD15B8125A6CCDC00FBAB21 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		DFD15B8A25A6CCFE00FBAB21 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +99,9 @@
 		DFD15B4925A6C52600FBAB21 /* money_trees */ = {
 			isa = PBXGroup;
 			children = (
+				DFD15B8925A6CCE500FBAB21 /* Model */,
+				DFD15B7D25A6CCB900FBAB21 /* Views */,
 				DFD15B4A25A6C52600FBAB21 /* money_treesApp.swift */,
-				DFD15B4C25A6C52600FBAB21 /* ContentView.swift */,
 				DFD15B4E25A6C52700FBAB21 /* Assets.xcassets */,
 				DFD15B5325A6C52700FBAB21 /* Info.plist */,
 				DFD15B5025A6C52700FBAB21 /* Preview Content */,
@@ -128,6 +133,23 @@
 				DFD15B6925A6C52700FBAB21 /* Info.plist */,
 			);
 			path = money_treesUITests;
+			sourceTree = "<group>";
+		};
+		DFD15B7D25A6CCB900FBAB21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFD15B4C25A6C52600FBAB21 /* ContentView.swift */,
+				DFD15B8125A6CCDC00FBAB21 /* CarouselView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFD15B8925A6CCE500FBAB21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DFD15B8A25A6CCFE00FBAB21 /* APIResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD15B4D25A6C52600FBAB21 /* ContentView.swift in Sources */,
+				DFD15B8B25A6CCFE00FBAB21 /* APIResponse.swift in Sources */,
+				DFD15B8225A6CCDC00FBAB21 /* CarouselView.swift in Sources */,
 				DFD15B4B25A6C52600FBAB21 /* money_treesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,10 @@ class DataFeed: ObservableObject {
         loadDataFeeds()
     }
     
+//    var data: [BudgetData?] {
+//        return [self.income, self.utility, self.food, self.transport, self.sub, self.other, self.total]
+//    }
+    
     func loadDataFeeds() {
         for i in 0..<BUDGET_TYPES.count {
             if let url = URL(string: URLS[i]) {

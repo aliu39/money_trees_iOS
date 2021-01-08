@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		3BA0195825A7C03900D39D65 /* Pods_money_trees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA0195725A7C03900D39D65 /* Pods_money_trees.framework */; };
 		3BA0195925A7C03900D39D65 /* Pods_money_trees.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA0195725A7C03900D39D65 /* Pods_money_trees.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		544E1354F5510DE7F8F81C50 /* Pods_money_trees_money_treesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1208F38D351CD252BEB8BF4 /* Pods_money_trees_money_treesUITests.framework */; };
+		DF39BA6A25A83BF9002D3CB3 /* FeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF39BA6925A83BF9002D3CB3 /* FeatureView.swift */; };
 		DF9025F025A6EB3600A0403C /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9025EF25A6EB3600A0403C /* Helpers.swift */; };
 		DFD15B4B25A6C52600FBAB21 /* money_treesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B4A25A6C52600FBAB21 /* money_treesApp.swift */; };
 		DFD15B4D25A6C52600FBAB21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B4C25A6C52600FBAB21 /* ContentView.swift */; };
@@ -24,7 +25,6 @@
 		DFD15B9D25A6DE5500FBAB21 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B9C25A6DE5500FBAB21 /* DataView.swift */; };
 		DFED441625A7E090000E1A33 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED441525A7E090000E1A33 /* Feed.swift */; };
 		DFED441E25A7E463000E1A33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED441D25A7E463000E1A33 /* Constants.swift */; };
-		FE034BB9CC11EA9B93B9BBAA /* Pods_money_trees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B7728374F05BB7BD83615 /* Pods_money_trees.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +67,7 @@
 		84304C48312EEC03CC4E8461 /* Pods-money_treesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-money_treesTests.debug.xcconfig"; path = "Target Support Files/Pods-money_treesTests/Pods-money_treesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C1208F38D351CD252BEB8BF4 /* Pods_money_trees_money_treesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_money_trees_money_treesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C833DF886B906C199F40450C /* Pods_money_trees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_money_trees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF39BA6925A83BF9002D3CB3 /* FeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureView.swift; sourceTree = "<group>"; };
 		DF9025EF25A6EB3600A0403C /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		DFD15B4725A6C52600FBAB21 /* money_trees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = money_trees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD15B4A25A6C52600FBAB21 /* money_treesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = money_treesApp.swift; sourceTree = "<group>"; };
@@ -131,9 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				3A70C2135DE9F11564685CEC /* Pods-money_trees.debug.xcconfig */,
-				E77585042BC9F409E88B11FB /* Pods-money_trees.release.xcconfig */,
 				0FAD4A9CD2F27573EDB8C44B /* Pods-money_trees-money_treesUITests.debug.xcconfig */,
-				ECA4C6D4CE1203B10FC25793 /* Pods-money_trees-money_treesUITests.release.xcconfig */,
 				84304C48312EEC03CC4E8461 /* Pods-money_treesTests.debug.xcconfig */,
 				67823379191037FD748C7775 /* Pods-money_treesTests.release.xcconfig */,
 			);
@@ -208,6 +207,7 @@
 				DFD15B8125A6CCDC00FBAB21 /* CarouselView.swift */,
 				DFD15B9425A6DD8B00FBAB21 /* ChartsView.swift */,
 				DFD15B9C25A6DE5500FBAB21 /* DataView.swift */,
+				DF39BA6925A83BF9002D3CB3 /* FeatureView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -462,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD15B9D25A6DE5500FBAB21 /* DataView.swift in Sources */,
+				DF39BA6A25A83BF9002D3CB3 /* FeatureView.swift in Sources */,
 				DFED441625A7E090000E1A33 /* Feed.swift in Sources */,
 				DF9025F025A6EB3600A0403C /* Helpers.swift in Sources */,
 				DFD15B4D25A6C52600FBAB21 /* ContentView.swift in Sources */,
@@ -646,7 +647,6 @@
 		};
 		DFD15B6E25A6C52700FBAB21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E77585042BC9F409E88B11FB /* Pods-money_trees.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -733,7 +733,6 @@
 		};
 		DFD15B7425A6C52700FBAB21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECA4C6D4CE1203B10FC25793 /* Pods-money_trees-money_treesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

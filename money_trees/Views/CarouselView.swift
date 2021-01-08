@@ -8,18 +8,28 @@
 import SwiftUI
 
 struct CarouselView: View {
-    var data: [BudgetData]
+    var data: [BudgetData?]
+    var budgets: [BudgetData] {
+        var arr: [BudgetData] = []
+        for budget in data {
+            if let entry = budget {
+                arr.append(entry)
+            }
+        }
+        return arr
+    }
     var body: some View {
         TabView() {
-            ForEach(data) { entry in
+            ForEach(budgets) { entry in
                 HStack {
-                    Spacer()
-                    VStack {
-                        DataView(entry: entry)
-                            .padding(.bottom)
-                        ChartsView(entry: entry)
-                    }
-                    Spacer()
+                    Text(entry.t)
+//                    Spacer()
+//                    VStack {
+//                        DataView(entry: entry)
+//                            .padding(.bottom)
+////                        ChartsView(entry: entry)
+//                    }
+//                    Spacer()
                 }
             }
         }
@@ -28,8 +38,8 @@ struct CarouselView: View {
     }
 }
 
-struct CarouselView_Previews: PreviewProvider {
-    static var previews: some View {
-        CarouselView(data: SAMPLE_DATA)
-    }
-}
+//struct CarouselView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CarouselView(data: SAMPLE_DATA)
+//    }
+//}

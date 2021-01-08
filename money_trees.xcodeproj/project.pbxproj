@@ -20,6 +20,8 @@
 		DFD15B8B25A6CCFE00FBAB21 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B8A25A6CCFE00FBAB21 /* APIResponse.swift */; };
 		DFD15B9525A6DD8B00FBAB21 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B9425A6DD8B00FBAB21 /* ChartsView.swift */; };
 		DFD15B9D25A6DE5500FBAB21 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD15B9C25A6DE5500FBAB21 /* DataView.swift */; };
+		DFED441625A7E090000E1A33 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED441525A7E090000E1A33 /* Feed.swift */; };
+		DFED441E25A7E463000E1A33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED441D25A7E463000E1A33 /* Constants.swift */; };
 		FE034BB9CC11EA9B93B9BBAA /* Pods_money_trees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B7728374F05BB7BD83615 /* Pods_money_trees.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		DFD15B8A25A6CCFE00FBAB21 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		DFD15B9425A6DD8B00FBAB21 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		DFD15B9C25A6DE5500FBAB21 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		DFED441525A7E090000E1A33 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		DFED441D25A7E463000E1A33 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,8 @@
 			children = (
 				DFD15B8A25A6CCFE00FBAB21 /* APIResponse.swift */,
 				DF9025EF25A6EB3600A0403C /* Helpers.swift */,
+				DFED441525A7E090000E1A33 /* Feed.swift */,
+				DFED441D25A7E463000E1A33 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -439,12 +445,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD15B9D25A6DE5500FBAB21 /* DataView.swift in Sources */,
+				DFED441625A7E090000E1A33 /* Feed.swift in Sources */,
 				DF9025F025A6EB3600A0403C /* Helpers.swift in Sources */,
 				DFD15B4D25A6C52600FBAB21 /* ContentView.swift in Sources */,
 				DFD15B8B25A6CCFE00FBAB21 /* APIResponse.swift in Sources */,
 				DFD15B8225A6CCDC00FBAB21 /* CarouselView.swift in Sources */,
 				DFD15B4B25A6C52600FBAB21 /* money_treesApp.swift in Sources */,
 				DFD15B9525A6DD8B00FBAB21 /* ChartsView.swift in Sources */,
+				DFED441E25A7E463000E1A33 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

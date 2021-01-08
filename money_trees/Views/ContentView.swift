@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+//    @ObservedObject var dataFeed = DataFeed()
     var body: some View {
         NavigationView {
             List {
-                if true {
-                    CarouselView(data: SAMPLE_DATA)
-                } else {
-                    Text("empty")
-                }
+                CarouselView(data: []) //Array(dataFeed.data))
             }
-            .navigationTitle("Money Trees")
+            .navigationTitle("Money Tree")
         }
     }
 }

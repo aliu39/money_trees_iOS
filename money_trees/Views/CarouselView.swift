@@ -31,7 +31,8 @@ struct CarouselView: View {
                 HStack {
                     Spacer()
                     VStack {
-                        Text(entry.t)
+                        Text(entry.t.uppercased())
+                            .font(.largeTitle)
                         ForEach (0..<entry.categories.count) { i in
                             DataView(values: entry.categories[i], category: entry.categNames[i], budgetType: entry.t)
                                 .padding(.bottom)

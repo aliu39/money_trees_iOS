@@ -58,7 +58,7 @@ struct DataView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(category.uppercased())
+            Text(category)
                 .font(.title).foregroundColor(Color.orange).multilineTextAlignment(.leading)
             Text("")
             Text(topt).foregroundColor(Color.orange)
@@ -67,7 +67,7 @@ struct DataView: View {
             Text("")
             Text(mont).foregroundColor(Color.orange)
             Text(highmon).font(.title).foregroundColor(Color.green)
-            Text("Start date: " + "").foregroundColor(Color.orange)
+//            Text("Start date: " + "").foregroundColor(Color.orange)
         }
     }
 }

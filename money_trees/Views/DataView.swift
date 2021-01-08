@@ -67,7 +67,6 @@ struct DataView: View {
             Text("")
             Text(mont).foregroundColor(Color.orange)
             Text(highmon).font(.title).foregroundColor(Color.green)
-//            Text("Start date: " + "").foregroundColor(Color.orange)
         }
     }
 }

@@ -83,7 +83,7 @@ class DataFeed: ObservableObject {
                             response.categories.append(val)
                         }
                     }
-//                    print("PARSING SUCCEEDED")
+                    print("PARSING SUCCEEDED")
                     return response
                 } else {
                     print("'data' val was not a string")

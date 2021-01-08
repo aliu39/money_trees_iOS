@@ -9,19 +9,19 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @ObservedObject var dataFeed = DataFeed()
     var body: some View {
         NavigationView {
             List {
-                CarouselView(data: [
-                    dataFeed.income,
-                    dataFeed.utility,
-                    dataFeed.food,
-                    dataFeed.transport,
-                    dataFeed.sub,
-                    dataFeed.other,
-                    dataFeed.total
-                ])
+                CarouselView()
+//                    data: [
+//                    dataFeed.income,
+//                    dataFeed.utility,
+//                    dataFeed.food,
+//                    dataFeed.transport,
+//                    dataFeed.sub,
+//                    dataFeed.other,
+//                    dataFeed.total
+//                ])
             }.navigationTitle("Money Tree")
         }
     }

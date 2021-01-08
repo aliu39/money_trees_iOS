@@ -8,34 +8,65 @@
 import SwiftUI
 
 struct CarouselView: View {
-    var budgets: [BudgetData]
-    
-    init(data: [BudgetData?]) {
-        self.budgets = []
-        for entry in data {
-            if let budget = entry {
-                self.budgets.append(budget)
-            } else {
-                self.budgets.append(BudgetData())
-            }
-        }
-        if (self.budgets.isEmpty) {
-            print("empty data")
-            self.budgets.append(BudgetData()) //dummy entry so ForEach doesn't crash
-        }
-    }
+    @ObservedObject var dataFeed = DataFeed()
     
     var body: some View {
         TabView() {
-            ForEach(budgets) { entry in
-                HStack {
-                    Spacer()
-                    VStack {
-                        FeatureView(entry: entry)
-                            .padding(.bottom)
-                    }
-                    Spacer()
+            HStack {
+                Spacer()
+                VStack {
+                    FeatureView(entry: dataFeed.income)
+                        .padding(.bottom)
                 }
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                VStack {
+                    FeatureView(entry: dataFeed.utility)
+                        .padding(.bottom)
+                }
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                VStack {
+                    FeatureView(entry: dataFeed.food)
+                        .padding(.bottom)
+                }
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                VStack {
+                    FeatureView(entry: dataFeed.transport)
+                        .padding(.bottom)
+                }
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                VStack {
+                    FeatureView(entry: dataFeed.sub)
+                        .padding(.bottom)
+                }
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                VStack {
+                    FeatureView(entry: dataFeed.other)
+                        .padding(.bottom)
+                }
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                VStack {
+                    FeatureView(entry: dataFeed.total)
+                        .padding(.bottom)
+                }
+                Spacer()
             }
         }
         .tabViewStyle(PageTabViewStyle())

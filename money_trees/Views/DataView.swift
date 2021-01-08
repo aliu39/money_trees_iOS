@@ -8,34 +8,72 @@
 import SwiftUI
 
 struct DataView: View {
-    var entry: BudgetData
-    var entryType: String = "SAVINGS"
-    var entryStartingDate: String = "1/1/20"
-    var strData: String {
-        var res = ""
-        for i in 0..<entry.categories.count {
-            var mo = 0
-            res += entry.categNames[i].uppercased() + "\n"
-            for num in entry.categories[i] {
-                res += monthToStr(mo) + ": $" + String(num) + "   "
-                mo += 1
-            }
-            res += "\n\n"
+    var values: [Float]
+    var category: String
+    var budgetType: String
+    var sum: Double{
+        var s=0.0
+        for num in (values) {
+            s = s+Double(num)
         }
-        return res
+        return s
     }
+    var highmon: String{
+        var h=0.0
+        var hm=0
+        var m=0
+        for num in (values) {
+            if(Double(num)>h){
+                h=Double(num)
+                hm=m
+            }
+            m+=1
+        }
+        return monthToStr(hm)
+    }
+    var topt: String{
+        if(budgetType=="income"){
+            return "You earned"
+        }
+        else if(budgetType=="utility" || budgetType=="sub"){
+            return "You paid"
+        }
+        else if(budgetType=="food" || budgetType=="transport" || budgetType=="other" || budgetType=="total"){
+            return "You spent"
+        }
+        return ""
+    }
+    var mont: String{
+        if(budgetType=="income"){
+            return "You earned the most in"
+        }
+        else if(budgetType=="utility" || budgetType=="sub"){
+            return "You paid the most in"
+        }
+        else if(budgetType=="food" || budgetType=="transport" || budgetType=="other" || budgetType=="total"){
+            return "You spent the most in"
+        }
+        return ""
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text(entry.t.uppercased())
-                .font(.title)
-            Text("Start date: " + entryStartingDate)
-            Text(strData)
+            Text(category.uppercased())
+                .font(.title).foregroundColor(Color.orange).multilineTextAlignment(.leading)
+            Text("")
+            Text(topt).foregroundColor(Color.orange)
+            Text("$"+String(sum)).font(.title).foregroundColor(Color.green)
+            Text("This Year").foregroundColor(Color.orange)
+            Text("")
+            Text(mont).foregroundColor(Color.orange)
+            Text(highmon).font(.title).foregroundColor(Color.green)
+            Text("Start date: " + "").foregroundColor(Color.orange)
         }
     }
 }
 
-//struct DataView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DataView(entry: SAMPLE_DATA[0])
-//    }
-//}
+struct DataView_Previews: PreviewProvider {
+    static var previews: some View {
+        DataView(values: [333,224,500,230], category:"job", budgetType: "income")
+    }
+}

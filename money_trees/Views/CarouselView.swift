@@ -31,9 +31,12 @@ struct CarouselView: View {
                 HStack {
                     Spacer()
                     VStack {
-                        DataView(entry: entry)
-                            .padding(.bottom)
-                        ChartsView(entry: entry)
+                        Text(entry.t)
+                        ForEach (0..<entry.categories.count) { i in
+                            DataView(values: entry.categories[i], category: entry.categNames[i], budgetType: entry.t)
+                                .padding(.bottom)
+                            ChartsView(arr: entry.categories[i])
+                        }
                     }
                     Spacer()
                 }

@@ -6,22 +6,13 @@
 //
 
 import SwiftUI
-import Charts
+//import Charts
 
 struct ChartsView: View {
-    
-    var entry: BudgetData
-    var range = 0..<1
-    init(entry: BudgetData) {
-        self.entry = entry
-        self.range = 0..<entry.categories.count
-    }
-    
+    var arr: [Float]
     var body: some View {
-        VStack {
-            ForEach(self.range) { i in
-                BarChart(d: entry.categories[i])
-            }
+        ZStack {
+            BarChart(d: arr)
         }
     }
 }
@@ -40,19 +31,23 @@ struct BarChart: View {
     }
     
     var body: some View {
-        HStack {
+        Text("")
+        VStack{
             ForEach(0..<data.count) { month in
-                VStack {
-                  Spacer()
-                  Rectangle()
-                    .fill(Color.green)
-                    .frame(width: 20, height: ((max == 0) ? 0 : 400 * CGFloat(data[month] / max)))
-                  Text(monthToStr(month))
-                    .font(.footnote)
-                    .frame(height: 20)
+                HStack {
+                    Text(monthToStr(month))
+                          .frame(width: 40, alignment: .trailing).foregroundColor(Color.orange)
+                    Rectangle()
+                         .fill(Color.green)
+                         .frame(width: CGFloat(((max == 0) ? 0 : 140 * CGFloat(data[month] / max))), height: 5.0)
+                    
+                    
+                    Spacer()
+                    Text("$"+String(data[month])).foregroundColor(Color.orange)
                 }
             }
         }
+        
     }
 }
 

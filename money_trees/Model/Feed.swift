@@ -59,7 +59,7 @@ class DataFeed: ObservableObject {
     }
     
     private func parseJSONData(_ data: Data) -> BudgetData? {
-        print("PARSING....")
+//        print("PARSING....")
         var json: Any = [:]
         do {
             json = try JSONSerialization.jsonObject(with: data, options: [])
@@ -79,7 +79,7 @@ class DataFeed: ObservableObject {
                             response.categories.append(val)
                         }
                     }
-                    print("PARSING SUCCEEDED")
+//                    print("PARSING SUCCEEDED")
                     return response
                 } else {
                     print("'data' val was not a string")

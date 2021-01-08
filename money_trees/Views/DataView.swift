@@ -26,7 +26,7 @@ struct DataView: View {
     }
     var body: some View {
         VStack(alignment: .leading) {
-            Text(entry.t)
+            Text(entry.t.uppercased())
                 .font(.title)
             Text("Start date: " + entryStartingDate)
             Text(strData)

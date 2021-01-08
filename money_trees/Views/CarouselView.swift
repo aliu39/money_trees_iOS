@@ -8,32 +8,37 @@
 import SwiftUI
 
 struct CarouselView: View {
-    var data: [BudgetData?]
-    var budgets: [BudgetData] {
-        var arr: [BudgetData] = []
-        for budget in data {
-            if let entry = budget {
-                arr.append(entry)
+    var budgets: [BudgetData]
+    
+    init(data: [BudgetData?]) {
+        self.budgets = []
+        for entry in data {
+            if let budget = entry {
+                self.budgets.append(budget)
+            } else {
+                self.budgets.append(BudgetData())
             }
         }
-        return arr
+        if (self.budgets.isEmpty) {
+            print("empty data")
+            self.budgets.append(BudgetData()) //dummy entry so ForEach doesn't crash
+        }
     }
+    
     var body: some View {
         TabView() {
             ForEach(budgets) { entry in
                 HStack {
-                    Text(entry.t)
-//                    Spacer()
-//                    VStack {
-//                        DataView(entry: entry)
-//                            .padding(.bottom)
-////                        ChartsView(entry: entry)
-//                    }
-//                    Spacer()
+                    Spacer()
+                    VStack {
+                        DataView(entry: entry)
+                            .padding(.bottom)
+                        ChartsView(entry: entry)
+                    }
+                    Spacer()
                 }
             }
         }
-        .aspectRatio(3 / 2, contentMode: .fit)
         .tabViewStyle(PageTabViewStyle())
     }
 }

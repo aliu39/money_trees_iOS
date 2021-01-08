@@ -8,10 +8,16 @@
 import Foundation
 
 class DataFeed: ObservableObject {
-    @Published var data: [BudgetData?] = [nil, nil, nil, nil, nil, nil, nil]
+    @Published var income: BudgetData? = nil
+    @Published var utility: BudgetData? = nil
+    @Published var food: BudgetData? = nil
+    @Published var transport: BudgetData? = nil
+    @Published var sub: BudgetData? = nil
+    @Published var other: BudgetData? = nil
+    @Published var total: BudgetData? = nil
     
     init() {
-//        loadDataFeeds()
+        loadDataFeeds()
     }
     
     func loadDataFeeds() {
@@ -21,7 +27,18 @@ class DataFeed: ObservableObject {
                     let parsedData = self.parseAPIResponse(data: data, response: response, error: error)
                     if var budgetData = parsedData {
                         budgetData.t = BUDGET_TYPES[i]
-                        self.data[i] = budgetData
+                        DispatchQueue.main.async {
+                            switch(i) {
+                            case 0: self.income = budgetData
+                            case 1: self.utility = budgetData
+                            case 2: self.food = budgetData
+                            case 3: self.transport = budgetData
+                            case 4: self.sub = budgetData
+                            case 5: self.other = budgetData
+                            case 6: self.total = budgetData
+                            default: print("out of bounds idx for BUDGET_TYPES")
+                            }
+                        }
                     }
                 }.resume()
             }
@@ -42,10 +59,10 @@ class DataFeed: ObservableObject {
     }
     
     private func parseJSONData(_ data: Data) -> BudgetData? {
-        print("PARSING....\n")
+        print("PARSING....")
         var json: Any = [:]
         do {
-            var json = try JSONSerialization.jsonObject(with: data, options: [])
+            json = try JSONSerialization.jsonObject(with: data, options: [])
         } catch {
             print("JSON PARSING FAILED")
         }
@@ -57,14 +74,18 @@ class DataFeed: ObservableObject {
                     var response = BudgetData()
                     
                     for name in categNames {
-                        response.categNames.append(name)
                         if let val = JSON[name] as? [Float] {
+                            response.categNames.append(name)
                             response.categories.append(val)
                         }
                     }
-                    print("PARSING SUCCEEDED\n")
+                    print("PARSING SUCCEEDED")
                     return response
+                } else {
+                    print("'data' val was not a string")
                 }
+            } else {
+                print("json was not a string dict")
             }
         } catch {
             return nil
